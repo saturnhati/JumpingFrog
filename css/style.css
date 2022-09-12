@@ -7,11 +7,34 @@ body {
     align-items: center;
 }
 
+.red {
+    animation: flashred .2s infinite; 
+}
+
+@keyframes flashred {
+    0%{
+        background-color: #7F0101;
+    }
+    50%{
+        background-color: #76A844;
+    }
+    100%{
+        background-color: #7F0101;      
+    }
+}
+
+
+
 h1 {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     margin: 6vh 0;
     color: white;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
 }
 
 footer {
@@ -67,10 +90,10 @@ button:disabled {
 }
 
 #shadow {
-    background-color: rgba(0, 0, 0, .3);
+    background-color: rgba(0, 0, 0, .2);
     width: 150px;
     height: 60px;
-    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, .3);
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, .2);
     position: absolute;
     left: 18px;
     top: 100px;
@@ -163,4 +186,34 @@ button:disabled {
     button {
         margin-bottom: 20px;
     }
+}
+
+/* MODALE */
+
+#modal {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, .7);
+    position: absolute;
+    z-index: 100;
+    top:0;
+    left:0;
+}
+
+#modal-body {
+    width: 70%;
+    height: 30%;
+    background-color: white;
+    position: absolute;
+    top: 34%;
+    left: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.invisible {
+    display: none;
 }
