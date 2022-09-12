@@ -46,14 +46,14 @@ function removeClass(){
 function hopscount (){
     counter ++
     display.innerHTML = `The frog jumped ${counter} times.`
-    if (counter == 1){
+    if (counter == tiredness){
         tired.classList.remove('im-so-sad-im-so-very-very-sad')
         frogImg.src="./images/frog-cry.png"
     }
 }
 
 function schiatting (){
-    if (counter == 2){
+    if (counter == tiredness + 10){
         frogIsDead = true
         tired.innerHTML = `The frog is dead.`
         tired.style.color = 'red'
